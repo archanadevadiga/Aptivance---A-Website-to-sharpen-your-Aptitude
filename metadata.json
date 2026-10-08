@@ -1,0 +1,6 @@
+{
+  "name": "Aptivance - Placement Aptitude Platform",
+  "description": "Master Aptitude. Clear Your Placement Test. Structured learning, interactive practice, formula bank, personalized diagnostic coaching, and Error Book for engineering campus placements.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
