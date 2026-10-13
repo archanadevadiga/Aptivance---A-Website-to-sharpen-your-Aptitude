@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <linearGradient id="naacGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="40%" stop-color="#EAB308"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <linearGradient id="naacNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="60%" stop-color="#0F2557"/>
+      <stop offset="100%" stop-color="#0A1931"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#FEF08A"/>
+      <stop offset="70%" stop-color="#FDE68A"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </radialGradient>
+    <path id="naacTopArc" d="M 65,250 A 185,185 0 0,1 435,250" fill="none"/>
+  </defs>
+
+  <!-- NAAC Outer Gear / Cog Wheel -->
+  <g fill="url(#naacGold)">
+    <polygon points="250,15 238,42 262,42" transform="rotate(0.0 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(11.25 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(22.5 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(33.75 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(45.0 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(56.25 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(67.5 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(78.75 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(90.0 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(101.25 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(112.5 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(123.75 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(135.0 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(146.25 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(157.5 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(168.75 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(180.0 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(191.25 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(202.5 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(213.75 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(225.0 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(236.25 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(247.5 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(258.75 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(270.0 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(281.25 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(292.5 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(303.75 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(315.0 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(326.25 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(337.5 250 250)"/><polygon points="250,15 238,42 262,42" transform="rotate(348.75 250 250)"/>
+  </g>
+  <circle cx="250" cy="250" r="230" fill="none" stroke="url(#naacGold)" stroke-width="5"/>
+  <circle cx="250" cy="250" r="222" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+
+  <!-- Navy Blue Ring -->
+  <circle cx="250" cy="250" r="212" fill="url(#naacNavy)" stroke="url(#naacGold)" stroke-width="4"/>
+
+  <!-- Circular Ring Text -->
+  <text font-family="'Arial', sans-serif" font-size="18.5" font-weight="bold" fill="#FFFFFF" letter-spacing="3.5">
+    <textPath href="#naacTopArc" startOffset="50%" text-anchor="middle">
+      NATIONAL ASSESSMENT AND ACCREDITATION COUNCIL
+    </textPath>
+  </text>
+
+  <!-- Inner Gold Field Rim -->
+  <circle cx="250" cy="250" r="148" fill="url(#sunGlow)" stroke="url(#naacGold)" stroke-width="5"/>
+  <circle cx="250" cy="250" r="140" fill="none" stroke="#1E3A8A" stroke-width="2"/>
+
+  <!-- Sun Radiance -->
+  <g stroke="#D97706" stroke-width="3" opacity="0.8">
+    <line x1="250" y1="200" x2="250" y2="130" transform="rotate(-75 250 200)"/><line x1="250" y1="200" x2="250" y2="130" transform="rotate(-60 250 200)"/><line x1="250" y1="200" x2="250" y2="130" transform="rotate(-45 250 200)"/><line x1="250" y1="200" x2="250" y2="130" transform="rotate(-30 250 200)"/><line x1="250" y1="200" x2="250" y2="130" transform="rotate(-15 250 200)"/><line x1="250" y1="200" x2="250" y2="130" transform="rotate(0 250 200)"/><line x1="250" y1="200" x2="250" y2="130" transform="rotate(15 250 200)"/><line x1="250" y1="200" x2="250" y2="130" transform="rotate(30 250 200)"/><line x1="250" y1="200" x2="250" y2="130" transform="rotate(45 250 200)"/><line x1="250" y1="200" x2="250" y2="130" transform="rotate(60 250 200)"/><line x1="250" y1="200" x2="250" y2="130" transform="rotate(75 250 200)"/>
+  </g>
+  <!-- Glowing Sun Disc -->
+  <circle cx="250" cy="200" r="38" fill="#F59E0B" stroke="#D97706" stroke-width="2"/>
+  <circle cx="250" cy="200" r="28" fill="#FDE047"/>
+
+  <!-- Open Book of Learning -->
+  <g transform="translate(250, 260)">
+    <!-- Left page -->
+    <path d="M 0,-10 C -30,-22 -70,-20 -95,-4 L -95,26 C -70,10 -30,8 0,18 Z" fill="#FFFFFF" stroke="#0F2557" stroke-width="2.5"/>
+    <path d="M -8,-6 C -32,-16 -68,-14 -88,-1" stroke="#64748B" stroke-width="1.5" fill="none"/>
+    <path d="M -8,2 C -32,-8 -68,-6 -88,7" stroke="#64748B" stroke-width="1.5" fill="none"/>
+    <path d="M -8,10 C -32,0 -68,2 -88,15" stroke="#64748B" stroke-width="1.5" fill="none"/>
+    <!-- Right page -->
+    <path d="M 0,-10 C 30,-22 70,-20 95,-4 L 95,26 C 70,10 30,8 0,18 Z" fill="#FFFFFF" stroke="#0F2557" stroke-width="2.5"/>
+    <path d="M 8,-6 C 32,-16 68,-14 88,-1" stroke="#64748B" stroke-width="1.5" fill="none"/>
+    <path d="M 8,2 C 32,-8 68,-6 88,7" stroke="#64748B" stroke-width="1.5" fill="none"/>
+    <path d="M 8,10 C 32,0 68,2 88,15" stroke="#64748B" stroke-width="1.5" fill="none"/>
+    <!-- Spine -->
+    <path d="M 0,-12 L 0,20" stroke="#0F2557" stroke-width="4"/>
+  </g>
+
+  <!-- Banner Ribbon across bottom: NAAC -->
+  <g transform="translate(250, 345)">
+    <!-- Ribbon ends fold -->
+    <path d="M -90,14 L -110,-4 L -90,-18 L -70,-18 L -70,14 Z" fill="#B45309"/>
+    <path d="M 90,14 L 110,-4 L 90,-18 L 70,-18 L 70,14 Z" fill="#B45309"/>
+    <!-- Main Banner -->
+    <rect x="-78" y="-18" width="156" height="36" rx="6" fill="url(#naacGold)" stroke="#78350F" stroke-width="2.5"/>
+    <text y="8" font-family="'Arial Black', 'Arial', sans-serif" font-size="24" font-weight="900" fill="#0F2557" text-anchor="middle" letter-spacing="6">
+      NAAC
+    </text>
+  </g>
+</svg>

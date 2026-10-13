@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" width="600" height="240">
+  <defs>
+    <!-- Saffron figure gradient -->
+    <linearGradient id="iicSaffron" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF8A00"/>
+      <stop offset="100%" stop-color="#E65100"/>
+    </linearGradient>
+    <!-- Navy Blue figure gradient -->
+    <linearGradient id="iicNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E40AF"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <!-- Green figure gradient -->
+    <linearGradient id="iicGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left Side: Vortex Innovation Figures Emblem -->
+  <g transform="translate(110, 120)">
+    <!-- Outer ambient ring -->
+    <circle cx="0" cy="0" r="78" fill="none" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.6"/>
+
+    <!-- 1. Saffron Human Figure (Top) -->
+    <g transform="rotate(0)">
+      <!-- Head -->
+      <circle cx="0" cy="-52" r="11" fill="url(#iicSaffron)"/>
+      <!-- Body dynamic curve reaching in vortex -->
+      <path d="M -14,-34 C 18,-42 45,-20 48,15 C 38,15 28,5 20,-12 C 10,-24 -4,-28 -14,-34 Z" fill="url(#iicSaffron)"/>
+    </g>
+
+    <!-- 2. Navy Blue Human Figure (Bottom Right) -->
+    <g transform="rotate(120)">
+      <!-- Head -->
+      <circle cx="0" cy="-52" r="11" fill="url(#iicNavy)"/>
+      <!-- Body dynamic curve -->
+      <path d="M -14,-34 C 18,-42 45,-20 48,15 C 38,15 28,5 20,-12 C 10,-24 -4,-28 -14,-34 Z" fill="url(#iicNavy)"/>
+    </g>
+
+    <!-- 3. Emerald Green Human Figure (Bottom Left) -->
+    <g transform="rotate(240)">
+      <!-- Head -->
+      <circle cx="0" cy="-52" r="11" fill="url(#iicGreen)"/>
+      <!-- Body dynamic curve -->
+      <path d="M -14,-34 C 18,-42 45,-20 48,15 C 38,15 28,5 20,-12 C 10,-24 -4,-28 -14,-34 Z" fill="url(#iicGreen)"/>
+    </g>
+
+    <!-- Central nucleus gear/spark -->
+    <circle cx="0" cy="0" r="10" fill="#F59E0B"/>
+    <circle cx="0" cy="0" r="6" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Right Side: Official Typography -->
+  <g transform="translate(210, 95)">
+    <text font-family="'Montserrat', 'Arial Black', sans-serif" font-size="24" font-weight="900" fill="#0F172A" letter-spacing="1">
+      INSTITUTION&apos;S
+    </text>
+    <text y="32" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="24" font-weight="900" fill="#0F172A" letter-spacing="1">
+      INNOVATION COUNCIL
+    </text>
+    <text y="62" font-family="'Arial', sans-serif" font-size="14" font-weight="700" fill="#DC2626" letter-spacing="0.5">
+      (Ministry of Education Initiative)
+    </text>
+  </g>
+</svg>

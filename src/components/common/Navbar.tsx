@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Logo } from './Logo';
+import { InstitutionalHeaderStrip } from './InstitutionalLogos';
+import { LogoManagerModal } from './LogoManagerModal';
 import { useApp } from '../../context/AppContext';
 import {
   BookOpen,
@@ -16,6 +18,7 @@ import {
   Menu,
   X,
   Flame,
+  Upload,
 } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
@@ -30,6 +33,13 @@ export const Navbar: React.FC = () => {
   } = useApp();
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [logoModalOpen, setLogoModalOpen] = useState(false);
+
+  useEffect(() => {
+    const handleOpen = () => setLogoModalOpen(true);
+    window.addEventListener('open_logo_manager', handleOpen);
+    return () => window.removeEventListener('open_logo_manager', handleOpen);
+  }, []);
 
   const unresolvedErrorCount = errorBook.filter((e) => !e.isResolved).length;
 
@@ -59,9 +69,12 @@ export const Navbar: React.FC = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-[#090a0f]/90 backdrop-blur-md border-b border-zinc-800/80">
+    <header className="sticky top-0 z-50 bg-[#090a0f]/95 backdrop-blur-md border-b border-zinc-800/80 shadow-lg">
+      {/* Official SIT, NAAC & IIC Institutional Accreditation Bar */}
+      <InstitutionalHeaderStrip onOpenLogoManager={() => setLogoModalOpen(true)} />
+
       {/* Top micro bar for streak and role switch */}
-      <div className="border-b border-zinc-800/40 bg-zinc-950/60 px-4 py-1 text-xs text-zinc-400">
+      <div className="border-b border-zinc-800/40 bg-zinc-950/70 px-4 py-1 text-xs text-zinc-400">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
             <span className="flex items-center gap-1 text-amber-400 font-medium">
@@ -108,13 +121,23 @@ export const Navbar: React.FC = () => {
       {/* Main navigation row */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-18">
-          {/* Logo click returns Home */}
-          <button
-            onClick={() => handleNavClick('home')}
-            className="flex items-center text-left focus:outline-none"
-          >
-            <Logo size="md" showTagline={true} />
-          </button>
+          {/* Logo click returns Home + Quick Logo Update Button */}
+          <div className="flex items-center gap-2.5">
+            <button
+              onClick={() => handleNavClick('home')}
+              className="flex items-center text-left focus:outline-none"
+            >
+              <Logo size="md" showTagline={true} />
+            </button>
+            <button
+              onClick={() => setLogoModalOpen(true)}
+              className="hidden lg:inline-flex items-center gap-1 px-2 py-1 text-[11px] rounded-lg bg-zinc-900/80 hover:bg-amber-500/20 text-zinc-400 hover:text-amber-300 border border-zinc-800 hover:border-amber-500/40 transition-colors font-medium"
+              title="Click to update or customize logo yourself"
+            >
+              <Upload className="w-3 h-3 text-amber-400" />
+              <span>Update Logo</span>
+            </button>
+          </div>
 
           {/* Desktop Nav Items */}
           <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
@@ -253,6 +276,9 @@ export const Navbar: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* Self-service interactive Logo Manager Modal */}
+      <LogoManagerModal isOpen={logoModalOpen} onClose={() => setLogoModalOpen(false)} />
     </header>
   );
 };

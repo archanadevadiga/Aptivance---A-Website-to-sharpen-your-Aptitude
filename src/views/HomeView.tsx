@@ -4,6 +4,7 @@ import { useApp } from '../context/AppContext';
 import { QUESTIONS_DATABASE } from '../data/questionsData';
 import { QuestionCard } from '../components/practice/QuestionCard';
 import { HeroGraphics } from '../components/common/HeroGraphics';
+import { InstitutionalShowcaseCard } from '../components/common/InstitutionalLogos';
 import {
   Compass,
   Target,
@@ -179,6 +180,11 @@ export const HomeView: React.FC = () => {
             </motion.div>
           ))}
         </div>
+      </section>
+
+      {/* ================= INSTITUTIONAL ACCREDITATIONS & LOGOS (SIT, NAAC, IIC) ================= */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <InstitutionalShowcaseCard />
       </section>
 
       {/* ================= THREE CORE DISCIPLINE CARDS ================= */}

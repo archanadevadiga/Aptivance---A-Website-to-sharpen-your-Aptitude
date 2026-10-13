@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { Question, MockTest, SubjectId, DifficultyLevel } from '../types';
+import { SITLogo, NAACLogo, IICLogo } from '../components/common/InstitutionalLogos';
+import { LogoManagerModal } from '../components/common/LogoManagerModal';
 import {
   Users2,
   PlusCircle,
@@ -13,6 +15,8 @@ import {
   Trash2,
   Layers,
   GraduationCap,
+  Sparkles,
+  UploadCloud,
 } from 'lucide-react';
 
 export const TeacherView: React.FC = () => {
@@ -26,6 +30,7 @@ export const TeacherView: React.FC = () => {
   } = useApp();
 
   const [activeSection, setActiveSection] = useState<'analytics' | 'questions' | 'tests' | 'batches'>('analytics');
+  const [showLogoModal, setShowLogoModal] = useState<boolean>(false);
 
   // Form states for creating question
   const [showQuestionModal, setShowQuestionModal] = useState<boolean>(false);
@@ -127,7 +132,21 @@ export const TeacherView: React.FC = () => {
           </p>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center gap-3">
+          {/* Institutional Logos in Faculty Portal */}
+          <div className="hidden sm:flex items-center gap-2.5 p-1.5 px-3 rounded-xl bg-zinc-900/80 border border-zinc-800">
+            <SITLogo size="sm" />
+            <NAACLogo size="sm" />
+            <IICLogo size="sm" />
+            <button
+              onClick={() => setShowLogoModal(true)}
+              className="ml-1 p-1 rounded-lg text-zinc-400 hover:text-amber-400 hover:bg-zinc-800 transition-colors"
+              title="Upload / Customize Logos"
+            >
+              <UploadCloud className="w-3.5 h-3.5" />
+            </button>
+          </div>
+
           <button
             onClick={() => setUserRole('student')}
             className="px-3.5 py-2 rounded-xl bg-zinc-900 border border-zinc-700 hover:border-amber-400 text-xs font-semibold text-zinc-300 transition-colors flex items-center gap-1.5"
@@ -662,6 +681,9 @@ export const TeacherView: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* Institutional & Brand Logo Manager Modal */}
+      <LogoManagerModal isOpen={showLogoModal} onClose={() => setShowLogoModal(false)} />
     </div>
   );
 };

@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <radialGradient id="goldGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFBEB"/>
+      <stop offset="60%" stop-color="#FEF3C7"/>
+      <stop offset="100%" stop-color="#FDE68A"/>
+    </radialGradient>
+    <linearGradient id="maroonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#800000"/>
+      <stop offset="50%" stop-color="#700000"/>
+      <stop offset="100%" stop-color="#550000"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="50%" stop-color="#EAB308"/>
+      <stop offset="100%" stop-color="#CA8A04"/>
+    </linearGradient>
+    <path id="topArcSIT" d="M 70,250 A 180,180 0 0,1 430,250" fill="none"/>
+    <path id="botArcSIT" d="M 430,250 A 180,180 0 0,1 70,250" fill="none"/>
+  </defs>
+
+  <!-- Outer Cog / Radiant Teeth -->
+  <g fill="url(#goldGrad)">
+    <!-- 24 radiant teeth / petals -->
+    <polygon points="250,20 240,40 260,40" transform="rotate(0 250 250)"/><polygon points="250,20 240,40 260,40" transform="rotate(15 250 250)"/><polygon points="250,20 240,40 260,40" transform="rotate(30 250 250)"/><polygon points="250,20 240,40 260,40" transform="rotate(45 250 250)"/><polygon points="250,20 240,40 260,40" transform="rotate(60 250 250)"/><polygon points="250,20 240,40 260,40" transform="rotate(75 250 250)"/><polygon points="250,20 240,40 260,40" transform="rotate(90 250 250)"/><polygon points="250,20 240,40 260,40" transform="rotate(105 250 250)"/><polygon points="250,20 240,40 260,40" transform="rotate(120 250 250)"/><polygon points="250,20 240,40 260,40" transform="rotate(135 250 250)"/><polygon points="250,20 240,40 260,40" transform="rotate(150 250 250)"/><polygon points="250,20 240,40 260,40" transform="rotate(165 250 250)"/><polygon points="250,20 240,40 260,40" transform="rotate(180 250 250)"/><polygon points="250,20 240,40 260,40" transform="rotate(195 250 250)"/><polygon points="250,20 240,40 260,40" transform="rotate(210 250 250)"/><polygon points="250,20 240,40 260,40" transform="rotate(225 250 250)"/><polygon points="250,20 240,40 260,40" transform="rotate(240 250 250)"/><polygon points="250,20 240,40 260,40" transform="rotate(255 250 250)"/><polygon points="250,20 240,40 260,40" transform="rotate(270 250 250)"/><polygon points="250,20 240,40 260,40" transform="rotate(285 250 250)"/><polygon points="250,20 240,40 260,40" transform="rotate(300 250 250)"/><polygon points="250,20 240,40 260,40" transform="rotate(315 250 250)"/><polygon points="250,20 240,40 260,40" transform="rotate(330 250 250)"/><polygon points="250,20 240,40 260,40" transform="rotate(345 250 250)"/>
+  </g>
+
+  <!-- Outer Golden Ring -->
+  <circle cx="250" cy="250" r="225" fill="none" stroke="url(#goldGrad)" stroke-width="6"/>
+  <circle cx="250" cy="250" r="215" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+
+  <!-- Maroon Main Band -->
+  <circle cx="250" cy="250" r="205" fill="url(#maroonGrad)" stroke="url(#goldGrad)" stroke-width="4"/>
+
+  <!-- Circular Typography on Maroon Band -->
+  <text font-family="'Cinzel', 'Times New Roman', serif" font-size="23" font-weight="bold" fill="#FFFBEB" letter-spacing="4.5">
+    <textPath href="#topArcSIT" startOffset="50%" text-anchor="middle">
+      SRINIVAS INSTITUTE OF TECHNOLOGY
+    </textPath>
+  </text>
+  <text font-family="'Cinzel', 'Times New Roman', serif" font-size="21" font-weight="bold" fill="#FEF08A" letter-spacing="5">
+    <textPath href="#botArcSIT" startOffset="50%" text-anchor="middle">
+      ★ MANGALURU ★
+    </textPath>
+  </text>
+
+  <!-- Inner Gold Beaded Ring -->
+  <circle cx="250" cy="250" r="145" fill="url(#goldGlow)" stroke="url(#goldGrad)" stroke-width="5"/>
+  <circle cx="250" cy="250" r="138" fill="none" stroke="#800000" stroke-width="2"/>
+
+  <!-- Central Emblem: Sun rays, Eternal Flame (Akhanda Jyothi), Open Book -->
+  <!-- Sun Rays behind flame -->
+  <g stroke="#F59E0B" stroke-width="2.5" opacity="0.7">
+    <line x1="250" y1="190" x2="250" y2="135" transform="rotate(-90 250 190)"/><line x1="250" y1="190" x2="250" y2="135" transform="rotate(-72 250 190)"/><line x1="250" y1="190" x2="250" y2="135" transform="rotate(-54 250 190)"/><line x1="250" y1="190" x2="250" y2="135" transform="rotate(-36 250 190)"/><line x1="250" y1="190" x2="250" y2="135" transform="rotate(-18 250 190)"/><line x1="250" y1="190" x2="250" y2="135" transform="rotate(0 250 190)"/><line x1="250" y1="190" x2="250" y2="135" transform="rotate(18 250 190)"/><line x1="250" y1="190" x2="250" y2="135" transform="rotate(36 250 190)"/><line x1="250" y1="190" x2="250" y2="135" transform="rotate(54 250 190)"/><line x1="250" y1="190" x2="250" y2="135" transform="rotate(72 250 190)"/><line x1="250" y1="190" x2="250" y2="135" transform="rotate(90 250 190)"/>
+  </g>
+
+  <!-- Golden Brass Lamp Stand -->
+  <ellipse cx="250" cy="200" rx="35" ry="8" fill="url(#goldGrad)" stroke="#78350F" stroke-width="1.5"/>
+  <path d="M 235,200 L 245,212 L 255,212 L 265,200 Z" fill="url(#goldGrad)" stroke="#78350F" stroke-width="1.5"/>
+  <path d="M 242,212 L 242,222 L 258,222 L 258,212 Z" fill="#B45309"/>
+  <ellipse cx="250" cy="222" rx="22" ry="5" fill="url(#goldGrad)" stroke="#78350F" stroke-width="1.5"/>
+
+  <!-- Deepa Sacred Flame (Layered orange, yellow, and pure gold) -->
+  <path d="M 250,132 C 265,152 272,170 268,185 C 265,196 257,200 250,200 C 243,200 235,196 232,185 C 228,170 235,152 250,132 Z" fill="#DC2626"/>
+  <path d="M 250,142 C 261,158 266,172 263,184 C 260,192 255,196 250,196 C 245,196 240,192 237,184 C 234,172 239,158 250,142 Z" fill="#F97316"/>
+  <path d="M 250,154 C 257,166 261,176 259,185 C 257,190 254,193 250,193 C 246,193 243,190 241,185 C 239,176 243,166 250,154 Z" fill="#FDE047"/>
+  <ellipse cx="250" cy="180" rx="4" ry="8" fill="#FFFFFF"/>
+
+  <!-- Open Book of Knowledge below lamp -->
+  <g transform="translate(250, 240)">
+    <!-- Book pages left -->
+    <path d="M 0,-5 C -25,-12 -55,-10 -75,2 L -75,22 C -55,10 -25,8 0,15 Z" fill="#FFFFFF" stroke="#78350F" stroke-width="2"/>
+    <path d="M -5,-2 C -28,-9 -52,-7 -70,5" stroke="#94A3B8" stroke-width="1" fill="none"/>
+    <path d="M -5,4 C -28,-3 -52,-1 -70,11" stroke="#94A3B8" stroke-width="1" fill="none"/>
+    <path d="M -5,10 C -28,3 -52,5 -70,17" stroke="#94A3B8" stroke-width="1" fill="none"/>
+    <!-- Book pages right -->
+    <path d="M 0,-5 C 25,-12 55,-10 75,2 L 75,22 C 55,10 25,8 0,15 Z" fill="#FFFFFF" stroke="#78350F" stroke-width="2"/>
+    <path d="M 5,-2 C 28,-9 52,-7 70,5" stroke="#94A3B8" stroke-width="1" fill="none"/>
+    <path d="M 5,4 C 28,-3 52,-1 70,11" stroke="#94A3B8" stroke-width="1" fill="none"/>
+    <path d="M 5,10 C 28,3 52,5 70,17" stroke="#94A3B8" stroke-width="1" fill="none"/>
+    <!-- Book spine / center fold -->
+    <path d="M 0,-7 L 0,16" stroke="#B45309" stroke-width="3"/>
+  </g>
+
+  <!-- Laurel Wreath Leaves surrounding lower sides -->
+  <g fill="#D97706" opacity="0.85">
+    <!-- Left wreath leaves -->
+    <ellipse cx="165" cy="225" rx="10" ry="5" transform="rotate(-40 165 225)"/>
+    <ellipse cx="155" cy="245" rx="10" ry="5" transform="rotate(-20 155 245)"/>
+    <ellipse cx="152" cy="265" rx="10" ry="5" transform="rotate(0 152 265)"/>
+    <ellipse cx="158" cy="285" rx="10" ry="5" transform="rotate(20 158 285)"/>
+    <!-- Right wreath leaves -->
+    <ellipse cx="335" cy="225" rx="10" ry="5" transform="rotate(40 335 225)"/>
+    <ellipse cx="345" cy="245" rx="10" ry="5" transform="rotate(20 345 245)"/>
+    <ellipse cx="348" cy="265" rx="10" ry="5" transform="rotate(0 348 265)"/>
+    <ellipse cx="342" cy="285" rx="10" ry="5" transform="rotate(-20 342 285)"/>
+  </g>
+
+  <!-- Motto Banner Ribbon: SAMAGRA GNANA -->
+  <g transform="translate(250, 310)">
+    <!-- Ribbon ends fold -->
+    <path d="M -115,10 L -130,-5 L -115,-15 L -95,-15 L -95,10 Z" fill="#991B1B"/>
+    <path d="M 115,10 L 130,-5 L 115,-15 L 95,-15 L 95,10 Z" fill="#991B1B"/>
+    <!-- Ribbon front -->
+    <path d="M -105,-15 C -40,-25 40,-25 105,-15 L 100,12 C 40,2 -40,2 -100,12 Z" fill="url(#goldGrad)" stroke="#78350F" stroke-width="1.5"/>
+    <!-- Ribbon text: SAMAGRA GNANA -->
+    <text y="2" font-family="'Times New Roman', serif" font-size="16" font-weight="bold" fill="#700000" text-anchor="middle" letter-spacing="3.5">
+      SAMAGRA GNANA
+    </text>
+  </g>
+</svg>

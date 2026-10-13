@@ -1,7 +1,8 @@
 import React from 'react';
 import { Logo } from './Logo';
+import { SITLogo, NAACLogo, IICLogo } from './InstitutionalLogos';
 import { useApp } from '../../context/AppContext';
-import { ShieldCheck, Target, Award, Sparkles } from 'lucide-react';
+import { ShieldCheck, Target, Award, Sparkles, Upload } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const { setActiveTab, setSelectedTopicForLearn } = useApp();
@@ -63,6 +64,16 @@ export const Footer: React.FC = () => {
             <div className="flex items-center gap-3 pt-2 text-xs text-amber-400/90 font-medium">
               <Sparkles className="w-4 h-4 text-amber-400" />
               <span>Personal Aptitude Coach for Engineering Campus Placements</span>
+            </div>
+            <div className="pt-1">
+              <button
+                onClick={() => window.dispatchEvent(new CustomEvent('open_logo_manager'))}
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-amber-300 border border-zinc-800 hover:border-amber-500/30 text-xs transition-all font-medium"
+                title="Update or customize platform logo"
+              >
+                <Upload className="w-3.5 h-3.5 text-amber-400" />
+                <span>Update / Change Logo</span>
+              </button>
             </div>
           </div>
 
@@ -163,11 +174,55 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
+        {/* Institutional Accreditation Bar (SIT, NAAC, IIC) */}
+        <div className="pt-8 mt-8 border-t border-zinc-800/80">
+          <div className="p-4 sm:p-5 rounded-2xl bg-zinc-950/70 border border-zinc-800/90 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3 text-left">
+              <div className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+              <div>
+                <div className="text-white text-xs sm:text-sm font-bold">
+                  SRINIVAS INSTITUTE OF TECHNOLOGY (SIT)
+                </div>
+                <div className="text-zinc-400 text-[11px]">
+                  Valachil, Merlapadavu, Mangaluru – 574143 · Affiliated to VTU Belagavi, Approved by AICTE
+                </div>
+              </div>
+            </div>
+
+            {/* Official 3 Logos (SIT, NAAC, IIC) - Clean without Grade A or 4-star text */}
+            <div className="flex items-center gap-3 sm:gap-4 flex-shrink-0">
+              <div className="flex items-center gap-2 p-1.5 px-2.5 rounded-xl bg-zinc-900 border border-zinc-800">
+                <SITLogo size="sm" />
+                <div className="text-left text-[10px]">
+                  <span className="font-bold text-white block">SIT</span>
+                  <span className="text-zinc-400">Mangaluru</span>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2 p-1.5 px-2.5 rounded-xl bg-zinc-900 border border-zinc-800">
+                <NAACLogo size="sm" />
+                <div className="text-left text-[10px]">
+                  <span className="font-bold text-zinc-200 block">NAAC</span>
+                  <span className="text-zinc-400">Accredited</span>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2 p-1.5 px-2.5 rounded-xl bg-zinc-900 border border-zinc-800">
+                <IICLogo size="sm" />
+                <div className="text-left text-[10px]">
+                  <span className="font-bold text-zinc-200 block">IIC</span>
+                  <span className="text-zinc-400">MoE Initiative</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom copyright and academic attribution */}
-        <div className="pt-8 mt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-400 gap-4">
-          <p>© {new Date().getFullYear()} Aptivance. Built for Campus Placement Aspirants.</p>
+        <div className="pt-6 mt-6 border-t border-zinc-800/60 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-400 gap-4">
+          <p>© {new Date().getFullYear()} Aptivance · Srinivas Institute of Technology (SIT).</p>
           <div className="flex items-center gap-4 text-zinc-400">
-            <span>Engineering Aptitude Platform</span>
+            <span>Training & Placement Cell</span>
             <span>·</span>
             <span className="text-amber-400/80">Sharpen Your Skills. Shape Your Future.</span>
           </div>
